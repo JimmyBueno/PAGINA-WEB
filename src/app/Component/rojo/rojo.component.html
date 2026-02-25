@@ -1,14 +1,582 @@
-  <p>
-  <ion-card>
-  <ion-card-header>
-    <ion-card-title>"Rojo: Es hora de parar y respirar."</ion-card-title> 
-  <img src="https://w7.pngwing.com/pngs/150/578/png-transparent-traffic-light-computer-icons-red-red-light-color-light-traffic-thumbnail.png" alt="imagen diseñada" width="300" height="200">
-  </ion-card-header>
- 
-  <ion-card-content>
-    Redes y Telecomunicaciones
+  <div #container 
+     (mousedown)="startDragging($event)" 
+     (mouseup)="stopDragging()" 
+     (mouseleave)="stopDragging()" 
+     (mousemove)="moveEvent($event)"
+          style="overflow-y: auto; height: 100vh; cursor: grab; user-select: none; background: #1c1c1a;">
 
-    <ion-button routerLink="/verde">llevame a verde</ion-button>
-  </ion-card-content>
-</ion-card>
-</p>
+<ion-card style="--background: #1e1e1e; color: white;">
+  <ion-card-header class="ion-text-center">
+    <h1 style="font-weight: bold; color: #c9baba; margin-bottom: 20px;">"El Lenguaje del Corcho: Historias que se Beben."</h1>
+
+
+  <p style="font-size: 1.3rem; color: #f3eeee; max-width: 80%; margin: 0 auto 10px auto;">
+    El vino es el único lenguaje universal que se escribe con tierra, clima y tiempo. No es simplemente una bebida; <BR> 
+      es el resultado de un baile perfecto entre la naturaleza y la mano del hombre. Cada botella guarda el secreto de una<BR> cosecha,
+         el carácter de una uva y el alma de la región que la vio nacer. 
+<BR>
+  <BR>
+Desde la fuerza estructurada de un tinto que madura en roble, hasta la frescura vibrante de un blanco nacido para refrescar<BR>
+   el alma, el vino tiene la capacidad de transformar un momento ordinario en una celebración inolvidable. Es el compañero silencioso<BR>
+     de las grandes charlas y el protagonista de los mejores maridajes.
+  <BR>
+    <BR>
+No se trata de ser un experto para disfrutarlo, sino de tener la curiosidad de descubrir sus matices. Porque al final,<BR>
+   el mejor vino no es el más caro, sino el que se comparte.
+  </p>
+  <div style="display: flex; justify-content: center; align-items: center; gap: 15px; width: 100%; flex-wrap: wrap; margin-top: 20px;">
+  
+  <ion-button routerLink="/amarillo" color="warning" mode="ios" style="font-weight: bold; --border-radius: 8px; width: 200px;">
+    CERVEZA
+  </ion-button>
+
+  <ion-button routerLink="/rojo" color="warning" mode="ios" style="font-weight: bold; --border-radius: 8px; width: 200px;">
+    VINOS
+  </ion-button>
+
+  <ion-button routerLink="/wisky" color="warning" mode="ios" style="font-weight: bold; --border-radius: 8px; width: 200px;">
+    WISKY
+  </ion-button>
+  <ion-button routerLink="/verde" color="warning" mode="ios" style="font-weight: bold; --border-radius: 8px; width: 200px;">
+    INICIO
+  </ion-button>
+
+</div>
+
+<div style="text-align: center; margin-top: 20px; padding: 10px;">
+  <h1 style="font-weight: bold; font-size: 1.4rem; color: #12a20f; margin-bottom:5px;">
+    VINO TINTOS
+  </h1>
+
+
+
+<ion-row style="display: flex; justify-content: center; align-items: flex-start;">
+
+   <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Cabernet Sauvignon
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfh-JwPf9eI8hGX5jQN93pa6MYbB4nLHBx7g&s"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 200px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          Es el "Rey de las Tintas". Posee taninos firmes
+           (esa sensación de sequedad en la boca) y una acidez alta. 
+           Sus aromas típicos son la grosella negra, pimiento verde y tabaco.
+            Ideal para carnes rojas grasas y quesos fuertes.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+   <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Malbec
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://laboladeoroquito.com/wp-content/uploads/2025/02/VINAS-DE-ALVEAR-MALBEC-VINO-ARGENTINO-1125ML-LA-BOLA-DE-ORO-QUITO-scaled.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 200px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          La estrella del Cono Sur. Es un vino de cuerpo medio a total,
+           con un color violeta profundo. Destaca por sus notas de ciruela
+            madura, violetas y vainilla si pasó por madera. Es el compañero 
+            inseparable del asado y las empanadas.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+      Merlot
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://laboladeoroquito.com/wp-content/uploads/2025/02/CONCHA-Y-TORO-RESERVADO-MERLOT-VINO-CHILENO-750ML-LA-BOLA-DE-ORO-QUITO-scaled.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 200px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          El vino de la "textura de seda". Es más redondeado y menos 
+          astringente que el Cabernet. Ofrece sabores a cereza negra, 
+          chocolate y hierbas finas. Es muy versátil, maridando excelente con pastas,
+          carnes blancas y estofados ligeros.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+       Pinot Noir
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://conchaytoro.com/wp-content/uploads/2023/08/DIA-PINOT-NOIR-POST-1024x683.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 310px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          La uva más elegante y difícil de cultivar. Es de cuerpo ligero, color traslúcido y pocos taninos. Sus aromas son de frambuesa, tierra húmeda y setas. Marida a la perfección con salmón, pato y platos con hongos.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+</ion-row>
+
+<div style="width: 80%; height: 2px; background: linear-gradient(to right, transparent, #ffc409, transparent); margin: 40px auto;"></div>
+
+<div style="text-align: center; margin-top: 20px; padding: 10px;">
+  <h1 style="font-weight: bold; font-size: 1.4rem; color: #12a20f; margin-bottom:5px;">
+    Vinos Blancos
+  </h1>
+
+<ion-row style="display: flex; justify-content: center; align-items: flex-start;">
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Chardonnay
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://doshemisferios.com/cdn/shop/files/DEL-MORRO-CHARDONNAY_fb117ebb-2903-408f-ac37-6e07b85a692f.png?v=1725371154&width=1946"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 200px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+         La uva blanca más famosa. Si no tiene madera, sabe a manzana verde y cítricos; si tiene madera, desarrolla notas de mantequilla, avellana y piña. Es ideal para langostas, aves con cremas y risottos.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+       Sauvignon Blanc
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://www.woodchestervalleyvineyard.co.uk/image/cache/catalog/2024%20Lifestyle%20Images/Sauv%20Blanc%202023%20sq-748x748.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 180px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+         Pura energía embotellada. Es muy ácido y refrescante, con un perfil "verde" que recuerda al pasto recién cortado, espárragos y maracuyá. Es el mejor aliado de los mariscos frescos, ceviches y queso de cabra.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+   <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Riesling
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://mexicowineacademy.mx/wp-content/uploads/2024/03/Vino-Blanco-min-e1710994010121.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 280px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+         Famoso por su equilibrio entre dulzor y acidez. Puede variar desde muy seco hasta muy dulce, con aromas a flores blancas, miel y un toque mineral. Espectacular con comida asiática picante o agridulce.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+   <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+       Albariño
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://ferrerwines.com/wp-content/uploads/2021/10/Vionta_Albarino_FerrerWines2.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 190px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          El alma del océano. Es un vino con una salinidad característica, notas de albaricoque y flores. Es el maridaje por excelencia de los frutos del mar y pescados blancos a la plancha.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+</ion-row>
+
+
+<div style="width: 80%; height: 2px; background: linear-gradient(to right, transparent, #ffc409, transparent); margin: 40px auto;"></div>
+
+<div style="text-align: center; margin-top: 20px; padding: 10px;">
+  <h1 style="font-weight: bold; font-size: 1.4rem; color: #12a20f; margin-bottom:5px;">
+    Vinos Rosados
+  </h1>
+
+<ion-row style="display: flex; justify-content: center; align-items: flex-start;">
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Rosado de Provence
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://www.vinoseleccion.com/blog/wp-content/uploads/2024/06/rosado-rose-770x513.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 200px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+         El estilo más refinado (Francia). De color rosa pálido, es seco, con notas de pomelo, fresas silvestres y flores blancas. Perfecto para ensaladas mediterráneas y tardes de verano.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Garnacha Rosado
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://wilhelmvineyards.com/wp-content/uploads/2020/10/Garnacha-Grenache-Rosado-Rose-Wine-1200x646.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 240px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+         Más vibrante y jugoso. Tiene un color cereza más intenso y sabores potentes a caramelo de fresa y frambuesa. Ideal para paellas, comida mexicana o platos con tomate.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+   <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+       Syrah Rosé
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://www.rochemazet.com/img/3h.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 200px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          Un rosado con personalidad. Suele tener más cuerpo y un toque de pimienta blanca junto a la cereza roja. Aguanta platos más intensos como carnes frías o pizzas artesanales.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+   <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Pinot Grigio Rosato
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Kitk8eI8KMZWYH4rfvPe9De2OeFH_z1FLg&s"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 150px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          Ligero como el aire. Es un vino muy suave, con notas de manzana roja y pétalos de rosa. Es el vino de "piscina" por excelencia, muy fácil de beber solo.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+</ion-row>
+
+
+<div style="width: 80%; height: 2px; background: linear-gradient(to right, transparent, #ffc409, transparent); margin: 40px auto;"></div>
+
+<div style="text-align: center; margin-top: 20px; padding: 10px;">
+  <h1 style="font-weight: bold; font-size: 1.4rem; color: #12a20f; margin-bottom:5px;">
+    Vinos Espumosos
+  </h1>
+
+<ion-row style="display: flex; justify-content: center; align-items: flex-start;">
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+       Champagne
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://alcornoque.mx/cdn/shop/articles/bollinger.jpg?v=1736370871"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 280px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+         Elaborado en Francia bajo el método tradicional. Sus burbujas son minúsculas y persistentes, con aromas a brioche, almendras y frutas blancas. Es el símbolo máximo del lujo y la celebración.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Prosecco
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://shopmionetto.com/cdn/shop/files/MionettoBrut750BeautyShot.png?v=1767732967&width=1500"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 180px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+      El espumoso italiano más popular. Es más dulce y frutal que el Champagne, con notas de pera y flores. Su burbuja es más grande y juguetona, ideal para el brindis diario.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+   <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Cava
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://www.coravin.com.es/cdn/shop/articles/AdobeStock_693521135_Editorial_Use_Only_e47fd80a-586c-431f-9100-b9d74881e3db.jpg?v=1750673762"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 280px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+         El espumoso español con carácter. Tiene notas de manzana madura y frutos secos, con una acidez muy equilibrada. Excelente para acompañar toda una comida, de principio a fin.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+   <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Moscato d’Asti
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk6zTrLIv4N3rBkH7Vn6PuCIiPijjM0lPSlg&s"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 140px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          Dulce, burbujeante y bajo en alcohol. Sabe exactamente a la uva fresca, con toques de miel y azahar. Es el acompañante perfecto para postres frutales o brunchs.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+</ion-row>
+
+ <ion-row style="display: flex; justify-content: center; align-items: stretch; margin-top: 40px; padding: 0 10px;">
+
+  <ion-col size="12" size-md="5" style="display: flex;">
+    <div style="border: 2px solid #9fb89f; 
+                background: #1a1a1a; 
+                border-radius: 15px; 
+                padding: 30px; 
+                width: 100%; 
+                text-align: center;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;">
+      
+      <h2 style="color: #ffc409; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">Danos tu Opinión</h2>
+      <p style="color: #c9baba; margin-bottom: 20px;">Tu experiencia nos ayuda a mejorar nuestra cava.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+        <input type="text" placeholder="Nombre completo" 
+               style="background: #eae3e3; border: 1px solid #444; color: #333; padding: 12px; border-radius: 8px; outline: none;">
+        
+        <input type="email" placeholder="Correo electrónico" 
+               style="background: #efe9e9; border: 1px solid #444; color: #333; padding: 12px; border-radius: 8px; outline: none;">
+        
+        <textarea placeholder="Cuéntanos tu experiencia..." rows="4" 
+                  style="background: #ded6d6; border: 1px solid #444; color: #333; padding: 12px; border-radius: 8px; outline: none; resize: none;"></textarea>
+        
+        <ion-button (click)="enviarOpinion()" color="success" style="font-weight: bold; margin-top: 10px; --border-radius: 8px;">
+          ENVIAR COMENTARIO
+        </ion-button>
+      </div>
+    </div>
+  </ion-col>
+ <ion-col size="12" size-md="7" style="display: flex;">
+    <div style="text-align: center; background: #1a1a1a; border-radius: 15px; border: 1px solid #444; padding: 20px; width: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
+      
+      <h2 style="color: #cfdf1d; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">
+        Nuestra Ubicación
+      </h2>
+      
+      <p style="color: #c9baba; margin-bottom: 20px;">
+        Visítanos en nuestra cava principal.
+      </p>
+
+      <ion-row style="align-items: center;">
+        <ion-col size="12" size-lg="7">
+          <div style="border-radius: 15px; overflow: hidden; border: 2px solid #12a20f; height: 250px;">
+            <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.721!2d-79.004!3d-2.901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNTQnMDMuNiJTIDc5wrAwMCcxNC40Ilc!5e0!3m2!1ses!2sec!4v1700000000000" 
+  width="100%" 
+  height="100%" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+          </div>
+        </ion-col>
+
+        <ion-col size="12" size-lg="5" style="text-align: left; padding: 10px;">
+          <div style="color: white; line-height: 1.4; font-size: 0.9rem;">
+            <p><strong style="color: #ffc409;">Dirección:</strong> <br> Cuenca, Ecuador</p>
+            <p><strong style="color: #ffc409;">Horarios:</strong> <br> Lun-Sáb:<br> 10AM-10PM</p>
+            <p><strong style="color: #ffc409;">Teléfono:</strong> <br> +593 999 999</p>
+            <ion-button color="success" size="small" style="font-weight: bold;">WAZE</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-col>
+</ion-row>
+
+ 
+  <div #container class="scroll-container" 
+     (mousedown)="startDragging($event)" 
+     (mouseup)="stopDragging()" 
+     (mouseleave)="stopDragging()" 
+     (mousemove)="moveEvent($event)">
+  
+  <div class="content">
+    </div> </div>
+    
+</div>

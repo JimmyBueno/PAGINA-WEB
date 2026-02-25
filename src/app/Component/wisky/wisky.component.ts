@@ -1,17 +1,18 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IonCard, IonCardContent,IonCardTitle, IonCardHeader, IonButton, IonCol, IonRow } from "@ionic/angular/standalone";
 
 @Component({
-  selector: 'app-rojo',
-  templateUrl: './rojo.component.html',
-  styleUrls: ['./rojo.component.scss'],
+  selector: 'app-wisky',
+  templateUrl: './wisky.component.html',
+  styleUrls: ['./wisky.component.scss'],
   imports: [IonRow, IonCol, IonCard, IonCardContent,IonCardHeader,IonCardTitle, RouterLink,IonButton],
 
 })
-export class RojoComponent  implements OnInit {
+export class wiskyComponent  implements OnInit {
   @ViewChild('container') scrollContainer!: ElementRef;
-   isMouseDown = false;
+
+  isMouseDown = false;
   startX = 0;
   startY = 0;
   scrollLeft = 0;
@@ -22,10 +23,10 @@ export class RojoComponent  implements OnInit {
     console.log("Opinión enviada");
   }
 
-
   constructor() { }
 
   ngOnInit() {}
+  // Estos métodos quitan las líneas rojas de tu HTML (image_fbc380.png)
   startDragging(e: MouseEvent) {
     this.isMouseDown = true;
     this.startX = e.pageX - this.scrollContainer.nativeElement.offsetLeft;

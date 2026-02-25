@@ -1,14 +1,292 @@
+<ion-modal [isOpen]="!esMayorDeEdad" [backdropDismiss]="false" [keyboardClose]="false" style="--border-radius: 15px;">
+  <ng-template>
+    <ion-content class="ion-padding ion-text-center" style="--background: #1a1a1a; color: white;">
+      <div style="margin-top: 15%; padding: 25px; border: 2px solid #edeaea; border-radius: 15px; background: #000; box-shadow: 0 0 20px rgba(255, 196, 9, 0.3);">
+        <ion-icon name="alert-circle-outline" style="font-size: 80px; color: #e23c09;"></ion-icon>
+        
+        <h1 style="color: #ef1919; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">Control de Acceso</h1>
+        
+        <p style="font-size: 1.4rem; margin: 20px 0; color: #e0e0e0;">
+          Para ingresar a la licorería, debes confirmar que eres legalmente apto para el consumo de alcohol. <br><br>
+          <strong>¿Eres mayor de 18 años?</strong>
+        </p>
 
-  <ion-card>
-  <ion-card-header>
-    <ion-card-title>"Verde: Adelante y sin dudar."</ion-card-title> 
-     <img src="https://e7.pngegg.com/pngimages/21/750/png-clipart-traffic-light-graphy-the-highway-code-green-traffic-light-pedestrian-highway-code-thumbnail.png" alt="imagen diseñada" width="300" height="200">
-  </ion-card-header>
+        <ion-row>
+          <ion-col size="6">
+            <ion-button expand="block" color="success" (click)="confirmarEdad(true)" style="font-weight: bold; --border-radius: 8px;">
+              SÍ, SOY MAYOR
+            </ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button expand="block" color="danger" (click)="confirmarEdad(false)" style="font-weight: bold; --border-radius: 8px;">
+              NO
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        
+        <p style="font-size: 1.8rem; color: #c9baba; margin-top: 20px; font-style: italic;">
+          "El consumo excesivo de alcohol limita su capacidad de conducir y operar maquinarias."
+        </p>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+
+<div #container 
+     (mousedown)="startDragging($event)" 
+     (mouseup)="stopDragging()" 
+     (mouseleave)="stopDragging()" 
+     (mousemove)="moveEvent($event)"
+
+     style="overflow-y: auto; height: 100vh; cursor: grab; user-select: none; background: #e6e7dd;">
+     
+<ion-card style="--background: #1e1e1e; color: white;">
+  <ion-card-header class="ion-text-center">
+    <h1 style="font-weight: bold; color: #c9baba; margin-bottom: 20px;">LICORERÍA PREMIUM</h1>
+
+      
+    <div style="font-size: 1.1rem; color: #e0e0e0; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+      "Seleccionamos las mejores etiquetas y las mantenemos en condiciones <br>
+      óptimas para que el primer sorbo sea perfecto. Olvídate de esperar: nuestro sistema <br>
+      de entrega ultra-rápido garantiza que tu brindis llegue listo para servir. Calidad <br>
+      premium, logística impecable y la temperatura justa, directo a tu mesa."
+    </div>
  
-  <ion-card-content>
-    Redes y Telecomunicaciones
+<div style="display: flex; justify-content: center; align-items: center; gap: 15px; width: 100%; flex-wrap: wrap; margin-top: 20px;">
+  
 
-    <ion-button routerLink="/amarillo">llevame amarillo</ion-button>
-  </ion-card-content>
+
+
+
+  
+  <ion-button routerLink="/amarillo" color="warning" mode="ios" style="font-weight: bold; --border-radius: 8px; width: 200px;">
+    CERVEZA
+  </ion-button>
+
+  <ion-button routerLink="/rojo" color="warning" mode="ios" style="font-weight: bold; --border-radius: 8px; width: 200px;">
+    VINOS
+  </ion-button>
+
+  <ion-button routerLink="/wisky" color="warning" mode="ios" style="font-weight: bold; --border-radius: 8px; width: 200px;">
+    WISKY
+  </ion-button>
+
+</div>
+
+    <ion-grid style="margin-top: 40px;">
+      <ion-row class="ion-justify-content-center ion-align-items-center">  
+
+
+  <ion-col size="12" size-md="4" style="margin-bottom: 30px;">
+  <img src="https://diariojudio.b-cdn.net/wp-content/uploads/2019/08/Vino-Porticos1-1024x657.jpg"
+    alt="Licores Premium 1" 
+    style="width: 100%; max-width: 180px; display: block; margin: 0 auto;">
+
+  <div style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+      Vinos de Cosecha
+    </h3>
+    <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+      Reserva exclusiva de viñedos seleccionados.<br>
+      Calidad premium para los paladares más exigentes.
+    </p>
+  </div>
+</ion-col>
+   
+   <ion-col size="12" size-md="4" style="margin-bottom: 30px;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvNrfBrKHR9N9riYdM6Ep1A9DpW0l6VCld9Q&s"
+    alt="Licores Premium 1" 
+    style="width: 100%; max-width: 180px; display: block; margin: 0 auto;">
+
+  <div style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+      Destilados y Licores
+    </h3>
+    <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+      "La esencia pura de los mejores granos y frutos."<br>
+"Maestría en cada gota, destilada para la perfección."
+    </p>
+  </div>
+</ion-col>
+    
+<ion-col size="12" size-md="4" style="margin-bottom: 30px;">
+  <img src="https://thumbs.dreamstime.com/b/botellas-de-marcas-globales-famosas-la-cerveza-pozn%C3%A1n-pol%C3%ADtico-marzo-incluyendo-heineken-las-cubas-tintura-el-brote-miller-143170440.jpg"
+    alt="Licores Premium 1" 
+    style="width: 100%; max-width: 180px; display: block; margin: 0 auto;">
+
+  <div style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+      CERVEZA
+    </h3>
+    <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+      "Cuerpo perfecto y espuma cremosa a la temperatura ideal."<br>
+       "La frescura que mereces, del barril directo a tu copa."
+    </p>
+  </div>
+</ion-col>
+    
+    <ion-col size="12" size-md="4" style="margin-bottom: 30px;">
+  <img src="https://laroussecocina.mx/wp-content/uploads/2025/06/ApreritivoVsDigestivo_Portada.jpg.webp"
+    alt="Licores Premium 1" 
+    style="width: 100%; max-width: 180px; display: block; margin: 0 auto;">
+
+  <div style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+      Aperitivo y Digestivo
+    </h3>
+    <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+      "El broche de oro para una cena inolvidable y armoniosa." <br> 
+      "Esencias naturales que acompañan el final de tus mejores platos."
+    </p>
+  </div>
+</ion-col>
+    
+
+    <ion-col size="12" size-md="4" style="margin-bottom: 30px;">
+  <img src="https://media.istockphoto.com/id/1303977605/es/foto/cinco-c%C3%B3cteles-en-las-manos-unidos-en-tostadas-de-celebraci%C3%B3n.jpg?s=612x612&w=0&k=20&c=xqze9Ens7n-TSPrSGmgkbv2228eGFuJpruOuSYFRO-U="
+    alt="Licores Premium 1" 
+    style="width: 100%; max-width: 180px; display: block; margin: 0 auto;">
+
+  <div style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+      Bevida sin Alcohol
+    </h3>
+    <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+     "Toda la frescura de la fruta natural en una mezcla vibrante." <br> 
+     "Sabor auténtico y refrescante, ideal para cualquier momento del día."
+    </p>
+  </div>
+</ion-col>
+    
+    
+     <ion-col size="12" size-md="4" style="margin-bottom: 30px;">
+  <img src="https://www.ondata.com.ec/wp-content/uploads/2025/11/ondata-blue-label.jpg"
+    alt="Licores Premium 1" 
+    style="width: 100%; max-width: 180px; display: block; margin: 0 auto;">
+
+  <div style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+      Ediciones Limitadas
+    </h3>
+    <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+     "Joyas de la licorería reservadas para las ocasiones más especiales." <br>
+      "Botellas numeradas con historias únicas y sabores irrepetibles."
+    </p>
+  </div>
+</ion-col>
+    
+
+    </ion-row>
+    </ion-grid>
+    </ion-card-header>
+
+   <div style="width: 80%; height: 2px; background: linear-gradient(to right, transparent, #ffc409, transparent); margin: 40px auto;"></div>
+
+    <ion-card-content class="ion-text-center">
+  <p style="margin-bottom: 15px; color: #c9baba; font-weight: 500; letter-spacing: 1px;">¡Ya sabes cómo es! 🥂<BR>
+    🥂 Pide tu botella ahora y deja que nosotros pongamos el hielo. 🧊<BR>
+       No dejes para mañana el brindis que puedes pegarte hoy.<BR>
+       📲 ¡Dale clic y arma la joda! 🇪🇨🥃
+      </p>
+  
+  <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
+    
+    <ion-button href="https://wa.me/0999362468" target="_blank" fill="clear" style="--color: #25d366;">
+      <ion-icon slot="icon-only" name="logo-whatsapp" style="font-size: 2rem;"></ion-icon>
+    </ion-button>
+
+    <ion-button href="https://instagram.com/tu-usuario" target="_blank" fill="clear" style="--color: #e1306c;">
+      <ion-icon slot="icon-only" name="logo-instagram" style="font-size: 2rem;"></ion-icon>
+    </ion-button>
+
+    <ion-button href="https://www.facebook.com/?locale=es_LA" target="_blank" fill="clear" style="--color: #1877f2;">
+      <ion-icon slot="icon-only" name="logo-facebook" style="font-size: 2rem;"></ion-icon>
+    </ion-button>
+
+  </div>
+<div style="width: 80%; height: 2px; background: linear-gradient(to right, transparent, #ffc409, transparent); margin: 40px auto;"></div>
+  <ion-row style="display: flex; justify-content: center; align-items: stretch; margin-top: 40px; padding: 0 10px;">
+
+  <ion-col size="12" size-md="5" style="display: flex;">
+    <div style="border: 2px solid #9fb89f; 
+                background: #1a1a1a; 
+                border-radius: 15px; 
+                padding: 30px; 
+                width: 100%; 
+                text-align: center;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;">
+      
+      <h2 style="color: #ffc409; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">Danos tu Opinión</h2>
+      <p style="color: #c9baba; margin-bottom: 20px;">Tu experiencia nos ayuda a mejorar nuestra cava.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+        <input type="text" placeholder="Nombre completo" 
+               style="background: #eae3e3; border: 1px solid #444; color: #333; padding: 12px; border-radius: 8px; outline: none;">
+        
+        <input type="email" placeholder="Correo electrónico" 
+               style="background: #efe9e9; border: 1px solid #444; color: #333; padding: 12px; border-radius: 8px; outline: none;">
+        
+        <textarea placeholder="Cuéntanos tu experiencia..." rows="4" 
+                  style="background: #ded6d6; border: 1px solid #444; color: #333; padding: 12px; border-radius: 8px; outline: none; resize: none;"></textarea>
+        
+        <ion-button (click)="enviarOpinion()" color="success" style="font-weight: bold; margin-top: 10px; --border-radius: 8px;">
+          ENVIAR COMENTARIO
+        </ion-button>
+      </div>
+    </div>
+  </ion-col>
+
+  <ion-col size="12" size-md="7" style="display: flex;">
+    <div style="text-align: center; background: #1a1a1a; border-radius: 15px; border: 1px solid #444; padding: 20px; width: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
+      
+      <h2 style="color: #cfdf1d; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">
+        Nuestra Ubicación
+      </h2>
+      
+      <p style="color: #c9baba; margin-bottom: 20px;">
+        Visítanos en nuestra cava principal.
+      </p>
+
+      <ion-row style="align-items: center;">
+        <ion-col size="12" size-lg="7">
+          <div style="border-radius: 15px; overflow: hidden; border: 2px solid #12a20f; height: 250px;">
+            <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.721!2d-79.004!3d-2.901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNTQnMDMuNiJTIDc5wrAwMCcxNC40Ilc!5e0!3m2!1ses!2sec!4v1700000000000" 
+  width="100%" 
+  height="100%" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+          </div>
+        </ion-col>
+
+        <ion-col size="12" size-lg="5" style="text-align: left; padding: 10px;">
+          <div style="color: white; line-height: 1.4; font-size: 0.9rem;">
+            <p><strong style="color: #ffc409;">Dirección:</strong> <br> Cuenca, Ecuador</p>
+            <p><strong style="color: #ffc409;">Horarios:</strong> <br> Lun-Sáb:<br> 10AM-10PM</p>
+            <p><strong style="color: #ffc409;">Teléfono:</strong> <br> +593 999 999</p>
+            <ion-button color="success" size="small" style="font-weight: bold;">WAZE</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-col>
+</ion-row>
+ 
+  <div #container class="scroll-container" 
+     (mousedown)="startDragging($event)" 
+     (mouseup)="stopDragging()" 
+     (mouseleave)="stopDragging()" 
+     (mousemove)="moveEvent($event)">
+  
+  <div class="content">
+    </div>
+
+</div>
+</ion-card-content>
 </ion-card>
-

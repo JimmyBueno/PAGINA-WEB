@@ -1,14 +1,484 @@
-<p>
-  <ion-card>
-  <ion-card-header>
-   <ion-card-title>"Amarillo: Atento, viene el cambio."</ion-card-title>
-   <img src="https://w7.pngwing.com/pngs/1016/319/png-transparent-traffic-light-lamp-lit-yellow-traffic-lights-comics-lights-poster.png" alt="imagen diseñada" width="300" height="200">
-  </ion-card-header>
- 
-  <ion-card-content>
-    Redes y Telecomunicaciones
+<div #container 
+     (mousedown)="startDragging($event)" 
+     (mouseup)="stopDragging()" 
+     (mouseleave)="stopDragging()" 
+     (mousemove)="moveEvent($event)"
+          style="overflow-y: auto; height: 100vh; cursor: grab; user-select: none; background: #1c1c1a;">
 
-    <ion-button routerLink="/rojo">llevame a rojo</ion-button>
-  </ion-card-content>
-</ion-card>
-</p>
+
+<ion-card style="--background: #1e1e1e; color: white;">
+  <ion-card-header class="ion-text-center">
+    <h1 style="font-weight: bold; color: #c9baba; margin-bottom: 20px;">SABOR SIN FILTRO</h1>
+
+
+  <p style="font-size: 1.3rem; color: #f3eeee; max-width: 80%; margin: 0 auto 10px auto;">
+    ¡Tu próxima cerveza favorita te está esperando en nuestra cava!<br>
+Explora una variedad única de estilos, aromas y maltas del mundo.<br>
+Haz tu pedido hoy y recíbelas frías, listas para destapar la diversión.  </p>
+<div style="display: flex; justify-content: center; align-items: center; gap: 15px; width: 100%; flex-wrap: wrap; margin-top: 20px;">
+  
+  <ion-button routerLink="/amarillo" color="warning" mode="ios" style="font-weight: bold; --border-radius: 8px; width: 200px;">
+    CERVEZA
+  </ion-button>
+
+  <ion-button routerLink="/rojo" color="warning" mode="ios" style="font-weight: bold; --border-radius: 8px; width: 200px;">
+    VINOS
+  </ion-button>
+
+  <ion-button routerLink="/wisky" color="warning" mode="ios" style="font-weight: bold; --border-radius: 8px; width: 200px;">
+    WISKY
+  </ion-button>
+  <ion-button routerLink="/verde" color="warning" mode="ios" style="font-weight: bold; --border-radius: 8px; width: 200px;">
+    INICIO
+  </ion-button>
+
+</div>
+
+
+<div style="text-align: center; margin-top: 20px; padding: 10px;">
+  <h1 style="font-weight: bold; font-size: 1.4rem; color: #12a20f; margin-bottom:5px;">
+    CERVEZAS DE LA  CASA
+  </h1>
+
+
+
+<ion-row style="display: flex; justify-content: center; align-items: flex-start;">
+
+ 
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 10px;">
+  
+  <div style="border: 2px solid #e1ebdd; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+             
+        <h3 style="color: #e1f03f; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+          BIELA
+        </h3>
+
+      <br>
+     <div style="margin-bottom: 10px; margin-top: 15px;">
+        <img src="https://marcasecuador.club/wp-content/uploads/2022/07/biela-y-bebidas-del-ecuador.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 320px; display: block; margin: 0 auto; border-radius: 8px;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 15px 0 0 0; line-height: 1.3;">
+          "Mi cuerpo pide agua, pero mi alma pide biela."<br>
+          "Fría como el corazón de tu ex."
+        </p>
+      </div>
+
+  </div>
+</ion-col>
+
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+     <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+     
+      <h3 style="color: hsl(46, 100%, 52%); font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Pilsener 
+      </h3>
+    <BR>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://i.ytimg.com/vi/KjOelX7bhyQ/maxresdefault.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 280px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          "La felicidad tiene nombre y apellido: <br>
+          Pilsener bien helada. 🍻 <br>
+          ¿Con quién te tomarías la primera hoy?<br>
+          Etiquétalo.
+        </p>
+      </div>
+       </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        CLUB
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/dd81e721312813.562ff297226d0.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 280px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          Hecha para quienes saben que el tiempo es el mejor ingrediente.<BR>
+             Un ritual de sabor, cuerpo y espuma perfecta. <br>
+             Club Premium: El arte de lo bien hecho.
+        </p>
+      </div>
+
+      </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+     <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        siembra
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://pbs.twimg.com/media/E1NBx9VXsAQ547n.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 180px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+         Ingredientes de verdad, cultivados con manos de oro.<br>
+Siente la pureza de lo que crece en casa.<br>
+Destapa una Siembra y celebra nuestra raíz.
+        </p>
+         </div>
+      </div>
+  </ion-col>
+
+</ion-row>
+
+<div style="width: 80%; height: 2px; background: linear-gradient(to right, transparent, #ffc409, transparent); margin: 40px auto;"></div>
+
+<div style="text-align: center; margin-top: 20px; padding: 10px;">
+  <h1 style="font-weight: bold; font-size: 1.4rem; color: #12a20f; margin-bottom:5px;">
+    CERVEZAS ARTESANALES
+  </h1>
+
+<ion-row style="display: flex; justify-content: center; align-items: flex-start;">
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Abysmo - Averno
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1rb6YqqKDL_YbsAu_Owsz8G7VjG8KjqKQNQ&s"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 180px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          Es una cerveza negra profunda con una espuma <br>
+           densa y persistente. Destaca por sus intensas<br>
+            notas a café tostado y chocolate amargo,<br>
+             ideal para quienes buscan un sabor robusto, <br>
+             con cuerpo y un final ligeramente ahumado.
+        </p>
+      </div>
+      </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Santa Rosa - La Diabla
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://cervezasantarosa.com/wp-content/uploads/elementor/thumbs/CervezasBodegonSantaRosa-qp6y5gx82f9s9omqrbdouunnt20u4xd9shszwahcso.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 180px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          Una cerveza de color cobrizo intenso y gran carácter.<br>
+           Se caracteriza por su alto contenido alcohólico<br>
+            y un sabor complejo donde predominan las maltas<br>
+             dulces y frutos secos, equilibrados con un<br>
+              amargor sutil pero firme.
+        </p>
+      </div>
+      </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        latitud cero
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsJQmx0shhZbx1nVSGvdcpfZXWkhHqTDTwdQ&s"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 175px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          La opción más refrescante y ligera del mundo <br>artesanal. 
+          Es una cerveza dorada y brillante con <br>  notascítricas
+           y herbales, diseñada para ser fácil de<br>  beber, 
+           con un cuerpo suave y un amargor muy<br> delicado 
+           que limpia el paladar.
+        </p>
+      </div>
+      </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Bandido Brewing
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://www.nanmagazine.com/wp-content/uploads/2018/03/Bandidos-del-P%C3%A1ramo-03.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 290px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+         Un equilibrio perfecto entre la malta y el lúpulo. <BR>
+          Ofrece aromas frutales y florales muy marcados, <br>
+          con un sabor cítrico que recuerda a la toronja, <br>
+          terminando con un amargor refrescante que invita <br>
+          a seguir disfrutando.
+        </p>
+      </div>
+      </div>
+  </ion-col>
+
+</ion-row>
+
+
+<div style="width: 80%; height: 2px; background: linear-gradient(to right, transparent, #ffc409, transparent); margin: 40px auto;"></div>
+
+<div style="text-align: center; margin-top: 20px; padding: 10px;">
+  <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+  <h1 style="font-weight: bold; font-size: 1.4rem; color: #12a20f; margin-bottom:5px;">
+    CERVEZAS INTERNACIONALES
+  </h1>
+
+<ion-row style="display: flex; justify-content: center; align-items: flex-start;">
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+       Guinness (irlanda)
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://heinekenpanama.com/wp-content/uploads/2023/12/Guinness-Banner.png"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 375px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          "La leyenda negra de Irlanda. Una cerveza tipo <br>
+          Stout famosa por su color oscuro profundo, <br>
+          espuma cremosa y notas inconfundibles a <br>
+          café tostado y chocolate amargo."
+        </p>
+      </div>
+      </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Budweiser- (ee.uu)
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://lacaretalicores.com/cdn/shop/files/BUDWEISER_SIX_NR.jpg?v=1764734974&width=600"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 245px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          "Conocida como 'The King of Beers'. Una Lager <br> americana
+           filtrada por madera de haya, lo que le<br>  otorga
+            un sabor excepcionalmente suave, ligero y refrescante."
+        </p>
+      </div>
+      </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+        Heineken- (paises bajos)
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://www.revistaaral.com/images/showid2/7475635?w=900&mh=700"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 265px; display: block; margin: 0 auto;">
+         <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+          "La Lager premium más reconocida del mundo. <br>
+          Destaca por su sabor equilibrado, frescura vibrante <br>
+          y su característico aroma frutal nacido de la <br> 
+          exclusiva levadura tipo A."
+        </p>
+      </div>
+      </div>
+  </ion-col>
+
+  <ion-col size="3" style="text-align: center; margin-top: 15px; padding: 0 10px;">
+    <div style="border: 2px solid #cfd6cc; 
+              background: #1a1a1a; 
+              border-radius: 15px; 
+              padding: 15px; 
+              height: 100%;">
+      <h3 style="color: #ffc409; font-weight: bold; font-size: 1.2rem; margin: 0; text-transform: uppercase;">
+       cerveza la paz-(bolivia)
+      </h3>
+      <br>
+      <div size="12" size-md="4" style="margin-bottom: 30px;">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/e2/d6/ed/cerveza-la-paz-un-producto.jpg"
+          alt="Licores Premium 1" 
+          style="width: 100%; max-width: 220px; display: block; margin: 0 auto;">
+        <br>
+        <br>
+        <p style="color: #c9baba; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.3;">
+        "El orgullo de la altura. Una cerveza tipo Pilsener <br>
+        elaborada con agua pura de los Andes bolivianos, <br>
+        ofreciendo un sabor balanceado con un toque de malta refinada."
+        </p>
+      </div>
+      </div>
+  </ion-col>
+
+</ion-row>
+
+<div style="width: 80%; height: 2px; background: linear-gradient(to right, transparent, #06c53f, transparent); margin: 40px auto;"></div>
+
+
+
+ <ion-row style="display: flex; justify-content: center; align-items: stretch; margin-top: 40px; padding: 0 10px;">
+
+  <ion-col size="12" size-md="5" style="display: flex;">
+    <div style="border: 2px solid #9fb89f; 
+                background: #1a1a1a; 
+                border-radius: 15px; 
+                padding: 30px; 
+                width: 100%; 
+                text-align: center;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;">
+      
+      <h2 style="color: #ffc409; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">Danos tu Opinión</h2>
+      <p style="color: #c9baba; margin-bottom: 20px;">Tu experiencia nos ayuda a mejorar nuestra cava.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+        <input type="text" placeholder="Nombre completo" 
+               style="background: #eae3e3; border: 1px solid #444; color: #333; padding: 12px; border-radius: 8px; outline: none;">
+        
+        <input type="email" placeholder="Correo electrónico" 
+               style="background: #efe9e9; border: 1px solid #444; color: #333; padding: 12px; border-radius: 8px; outline: none;">
+        
+        <textarea placeholder="Cuéntanos tu experiencia..." rows="4" 
+                  style="background: #ded6d6; border: 1px solid #444; color: #333; padding: 12px; border-radius: 8px; outline: none; resize: none;"></textarea>
+        
+        <ion-button (click)="enviarOpinion()" color="success" style="font-weight: bold; margin-top: 10px; --border-radius: 8px;">
+          ENVIAR COMENTARIO
+        </ion-button>
+      </div>
+    </div>
+  </ion-col>
+
+   <ion-col size="12" size-md="7" style="display: flex;">
+    <div style="text-align: center; background: #1a1a1a; border-radius: 15px; border: 1px solid #444; padding: 20px; width: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
+      
+      <h2 style="color: #cfdf1d; font-weight: bold; text-transform: uppercase; margin-bottom: 10px;">
+        Nuestra Ubicación
+      </h2>
+      
+      <p style="color: #c9baba; margin-bottom: 20px;">
+        Visítanos en nuestra cava principal.
+      </p>
+
+      <ion-row style="align-items: center;">
+        <ion-col size="12" size-lg="7">
+          <div style="border-radius: 15px; overflow: hidden; border: 2px solid #12a20f; height: 250px;">
+            <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.721!2d-79.004!3d-2.901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNTQnMDMuNiJTIDc5wrAwMCcxNC40Ilc!5e0!3m2!1ses!2sec!4v1700000000000" 
+  width="100%" 
+  height="100%" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+          </div>
+        </ion-col>
+
+        <ion-col size="12" size-lg="5" style="text-align: left; padding: 10px;">
+          <div style="color: white; line-height: 1.4; font-size: 0.9rem;">
+            <p><strong style="color: #ffc409;">Dirección:</strong> <br> Cuenca, Ecuador</p>
+            <p><strong style="color: #ffc409;">Horarios:</strong> <br> Lun-Sáb:<br> 10AM-10PM</p>
+            <p><strong style="color: #ffc409;">Teléfono:</strong> <br> +593 999 999</p>
+            <ion-button color="success" size="small" style="font-weight: bold;">WAZE</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-col>
+</ion-row>
+
+ 
+  <div #container class="scroll-container" 
+     (mousedown)="startDragging($event)" 
+     (mouseup)="stopDragging()" 
+     (mouseleave)="stopDragging()" 
+     (mousemove)="moveEvent($event)">
+  
+  <div class="content">
+    </div> </div>
+    
+</div>
